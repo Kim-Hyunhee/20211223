@@ -21,12 +21,7 @@ for i in range(6):
         # 기준 2. 이미 등록된 숫자인가? 중복이 아니어야만 목록에 추가 가능
             # my_num_list 내부의 숫자들을 하나씩 꺼내보자 => input_num과 같은 숫자 발견하면? => 중복 검사 탈락 => 다시 입력 받아야함
             
-        is_duplicated = False  # 중복되지 않았다고 전제하자
-        
-        for my_num in my_num_list:
-            if input_num == my_num :
-                # 같은 숫자 발견 : 중복이다
-                is_duplicated = True
+        is_duplicated = input_num in my_num_list   # 등록된 숫자에 입력한 숫자가 있는가?  => 있다면 중복
         
         # 범위 OK 이고, 중복은 아니어야 목록에 추가
         
