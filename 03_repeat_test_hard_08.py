@@ -40,3 +40,8 @@ while True:
                 
     # 구해진 S/B 갯수 출력
     print(f'{strike_count}S {ball_count}B 입니다.')
+    
+    # 3S라면 게임 종료 (축하합니다! 정답을 맞췄습니다. f'string 문구 출력)
+    if strike_count == 3:
+        print(f'축하합니다! 정답을 맞췄습니다.')
+        break
