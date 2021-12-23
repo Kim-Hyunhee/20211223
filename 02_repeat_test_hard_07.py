@@ -48,29 +48,8 @@ print(my_num_list)
 
 # 당첨 번호 6개를 생성 (랜덤 생성)
 
-win_num_list = []
+win_num_list = random.sample(range(1, 46), 6)
 
-for i in range(6):
-    # 제대로 된 숫자가 나올 때까지 무한 반복
-    while True:
-        # 1 ~ 45는 랜덤 범위를 지정하면 해결됨
-        # 그러나 중복은 검사 해야함
-        
-        # 1 ~ 45의 랜덤값 추출
-        random_num = random.randint(1, 45)
-        
-        # 중복 검사 통과 여부
-        # 들어있지 않아야 OK
-        is_dupl_ok = random_num not in win_num_list
-        
-        if is_dupl_ok:
-            # 통과했다면 목록에 뽑아낸 랜덤 값을 추가
-            win_num_list.append(random_num)
-            break  # 무한 반복 탈출, 다음 숫자 뽑으러 이동
-        
-# 당첨 번호도 오름차순으로 정렬        
-win_num_list.sort()        
+win_num_list.sort()
 
-# 당첨 번호 목록 확인
-print(f'당첨 번호들 : {win_num_list}')
-        
+print(f'당첨 번호 목록 : {win_num_list}')
