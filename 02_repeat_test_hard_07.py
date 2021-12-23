@@ -15,7 +15,7 @@ for i in range(6):
         # 받은 숫자(input_num)가 목록에 추가해도 되는 숫자인지 검사 => 통과 할 때만 추가하자
        
         # 기준 1. 1 ~ 45 이내의 숫자가 맞는가?
-        is_range_ok = (1 <= input_num) and (input_num <= 45)  # =>bool로 받음
+        is_range_ok = input_num in range( 1, 46 )  # 1 ~ 45 범위에 있는가?
         
         # 기준 2. 중복이 아닌가?
         # 기준 2. 이미 등록된 숫자인가? 중복이 아니어야만 목록에 추가 가능
