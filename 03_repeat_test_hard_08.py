@@ -27,21 +27,16 @@ while True:
     
     # 내 숫자들과 문제 숫자들을 비교해서, S/B 갯수 구하기
     # 목록을 보는데 index가 몇 인지도 파악하면서 확인해야 위치가 같은지 다른지 판단 가능
-    # Bubble Sort 코드 참고
+
+    # for문을 돌면서 index / 목록 내용물을 한꺼번에 받아내기
     
-    # 내 숫자를 바꿔주는 for
-    for i in range(3):
-        # 문제 숫자를 가져오는 for
-        for j in range(3):
-            # 내 숫자 / 문제 숫자가 같은가?
-            if user_numbers[i] == cpu_number[j]:
-                # 같은 숫자 발견 => 위치도 같은가? => 추가 검사
+    for i, user_num in enumerate(user_numbers):
+        for j, cpu_num in enumerate(cpu_number):
+            if user_num == cpu_num:
                 if i == j:
-                    # 위치가 같다면? => S 하나 발견
                     strike_count += 1
                 else:
-                    # 위치가 다르다면? => B 하나 발견
-                    ball_count += 1        
-
+                    ball_count += 1
+                
     # 구해진 S/B 갯수 출력
     print(f'{strike_count}S {ball_count}B 입니다.')
