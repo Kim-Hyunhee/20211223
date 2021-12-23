@@ -8,11 +8,17 @@ import random
 cpu_number = random.sample(range(1, 10), 3)
 
 # 테스트 - 출제된 숫자들이 뭔지 확인
-print(cpu_number)
+# print(cpu_number)
+
+# 입력 시도 횟수를 기록할 변수
+try_count = 0
 
 # 정답을 맞출 때까지 계속 반복 입력
 while True:
     input_num = int(input('세 자리 숫자 입력 : '))
+    
+    # 한 번 추가로 시도했다고 기록
+    try_count += 1
     
     # 숫자를 세 자리로 분해해서 저장해 줄 목록 생성
     # ex. 456이 들어오면 => [4, 5, 6] => [백의 자리, 십의 자리, 일의 자리]
@@ -42,6 +48,7 @@ while True:
     print(f'{strike_count}S {ball_count}B 입니다.')
     
     # 3S라면 게임 종료 (축하합니다! 정답을 맞췄습니다. f'string 문구 출력)
+    # 몇 번의 입력 시도에 맞췄는지 표시
     if strike_count == 3:
-        print(f'축하합니다! 정답을 맞췄습니다.')
+        print(f'축하합니다! {try_count}회 만에 정답을 맞췄습니다.')
         break
