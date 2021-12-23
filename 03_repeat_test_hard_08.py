@@ -20,3 +20,16 @@ while True:
     user_numbers = [ input_num // 100, input_num // 10 % 10 , input_num % 10 ]
     
     print(user_numbers)
+    
+    # S와 B의 갯수를 구하자
+    strike_count = 0
+    ball_count = 0
+    
+    # 내 숫자들과 문제 숫자들을 비교해서, S/B 갯수 구하기
+    # 목록을 보는데 index가 몇 인지도 파악하면서 확인해야 위치가 같은지 다른지 판단 가능
+    # Bubble Sort 코드 참고
+
+            
+    
+    # 구해진 S/B 갯수 출력
+    print(f'{strike_count}S {ball_count}B')
