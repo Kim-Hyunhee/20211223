@@ -68,7 +68,8 @@ for i in range(6):
             win_num_list.append(random_num)
             break  # 무한 반복 탈출, 다음 숫자 뽑으러 이동
         
-        
+# 당첨 번호도 오름차순으로 정렬        
+win_num_list.sort()        
 
 # 당첨 번호 목록 확인
 print(f'당첨 번호들 : {win_num_list}')
